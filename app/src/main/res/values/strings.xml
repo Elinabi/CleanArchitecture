@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">CleanArchitecture</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="show">покозать</string>
+    <string name="do_not_show">скрыть</string>
+    <string name="your_password">your password:</string>
+    <string name="your_age">your age:</string>
+    <string name="your_name">your name:</string>
+    <string name="confirm">confirm</string>
+    <string name="input_your_password">input your password</string>
+    <string name="input_your_age">input your age</string>
+    <string name="input_your_name">input your name</string>
+    <string name="cinfirm">Зарегистрироваться</string>
+</resources>
