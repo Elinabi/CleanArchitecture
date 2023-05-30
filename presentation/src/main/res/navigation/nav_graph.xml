@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/authUserFragment">
+
+    <fragment
+        android:id="@+id/authUserFragment"
+        android:name="com.example.presentation.ui.fragments.auth.AuthUserFragment"
+        android:label="fragment_auth_user"
+        tools:layout="@layout/fragment_auth_user" >
+        <action
+            android:id="@+id/action_authUserFragment_to_informationUserFragment"
+            app:destination="@id/informationUserFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/informationUserFragment"
+        android:name="com.example.presentation.ui.fragments.information.InformationUserFragment"
+        android:label="fragment_information_user"
+        tools:layout="@layout/fragment_information_user" >
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="age"
+            app:argType="integer" />
+        <argument
+            android:name="password"
+            app:argType="string" />
+    </fragment>
+
+</navigation>

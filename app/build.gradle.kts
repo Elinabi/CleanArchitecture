@@ -5,10 +5,8 @@ plugins {
     kotlin("kapt")
     //Hilt
     id("com.google.dagger.hilt.android")
-    // SafeArgs
-    id("androidx.navigation.safeargs")
-}
 
+}
 android {
     namespace = "com.example.cleanarchitecture"
     compileSdk = 33
@@ -36,9 +34,6 @@ android {
     kotlinOptions {
         jvmTarget = "17"
     }
-    buildFeatures {
-        viewBinding = true
-    }
 }
 
 dependencies {
@@ -62,33 +57,6 @@ dependencies {
     // noinspection GradleDependency
     implementation("androidx.fragment:fragment-ktx:$fragment_version")
 
-    // Retrofit 2
-    val retrofitVersion = "2.9.0"
-    implementation("com.squareup.retrofit2:retrofit:$retrofitVersion")
-    //Gson
-    implementation("com.squareup.retrofit2:converter-gson:$retrofitVersion")
-
-    // OkHttp
-    implementation("com.squareup.okhttp3:okhttp-bom:5.0.0-alpha.6")
-    implementation("com.squareup.okhttp3:okhttp")
-    implementation("com.squareup.okhttp3:logging-interceptor")
-
-// ViewBindingPropertyDelegate
-//    val view_binding_property_delegate = "1.5.3"
-// To use only without reflection variants of viewBinding
-//noinspection GradleDependency
-//    implementation("com.github.kirich1409:viewbindingpropertydelegate-noreflection:$view_binding_property_delegate")
-
-    // Glide
-    implementation("com.github.bumptech.glide:glide:4.15.0")
-    annotationProcessor("com.github.bumptech.glide:compiler:4.15.0")
-
-    // Navigation
-    val navVersion = "2.5.3"
-    // implementation
-    implementation("androidx.navigation:navigation-fragment-ktx:$navVersion")
-    implementation("androidx.navigation:navigation-ui-ktx:$navVersion")
-
     // Hilt
     val hilt_version = "2.45"
     implementation("com.google.dagger:hilt-android:$hilt_version")
@@ -98,11 +66,13 @@ dependencies {
     val paging_version = "3.1.1"
     implementation("androidx.paging:paging-runtime:$paging_version")
 
-    // Recycler
-    implementation("androidx.recyclerview:recyclerview:1.3.0")
-    implementation("androidx.recyclerview:recyclerview-selection:1.1.0")
+    // Presentation
+    implementation(project(":presentation"))
 
-    // ViewBindingPropertyDelegate
-    implementation ("com.github.kirich1409:viewbindingpropertydelegate-noreflection:1.5.9")
+    // Domain
+    implementation(project(":domain"))
+
+    // Data
+    implementation(project(":data"))
 
 }
